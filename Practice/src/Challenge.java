@@ -21,12 +21,23 @@ public class Challenge {
         System.out.printf("The area of a rectangle with %dm height & %dm width is: ", height, width);
         int inResult = sc.nextInt();
         if (inResult != width * height) {
-            System.out.println("Like many before you. You failed!");
+            System.out.println("Like many before you. You have failed!");
             System.exit(2);
         }
 
         System.out.println("How surprising, you have passed the first challenge.");
+        double radius = Math.round(rd.nextDouble(1.1,10) * 100) / 100.0;
+        double area = Math.PI * Math.pow(radius, 2);
+        System.out.printf("The area of the circle with a radius of %fm is: ", radius);
+        double inArea = sc.nextDouble();
+        sc.nextLine();
+        if (inArea != area) {
+            System.out.println("Like many before you. You have failed!");
+            System.exit(3);
+        }
 
+        System.out.println("You've impressed me challenger!\nMay I know your name?");
+        String Name = sc.nextLine();
 
         sc.close();
     }
