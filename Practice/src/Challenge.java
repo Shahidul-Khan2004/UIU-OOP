@@ -82,11 +82,23 @@ public class Challenge {
         System.out.print("Consider these fruits: ");
         for (String selectedFruit: selectedFruitsAtRandom) System.out.print(selectedFruit + ", ");
         System.out.println("\nWhich of these fruit are sweet?");
+        sc.nextLine();
         String fruitsString = sc.nextLine();
-        String[] fruitInputs = fruitsString.trim().split("[,.\\s]");
-//        for (int i = 0; i < fruitInputs.length; i+=2) {
-//            for (int j = 0; j < )
-//        }
+        String[] fruitInputs = fruitsString.trim().split("[,.\\s]+");
+        for (String inFruit: fruitInputs) {
+            for (int selectedFruitIndex: selectedFruitIndexes) {
+                if(inFruit.equalsIgnoreCase(Fruits[selectedFruitIndex].name)) {
+                    if (!Fruits[selectedFruitIndex].isSweet) {
+                        System.out.println("You have failed the simplest part of a trial of the chosen. This path is not for you!");
+                        System.exit(8);
+                    }
+                }
+            }
+        }
+        System.out.println("That so? Which one of these is the sacred one?");
+        sc.nextLine();
+        String inSacredFruit = sc.nextLine();
+
 
         sc.close();
     }
