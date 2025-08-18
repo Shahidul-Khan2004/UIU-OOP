@@ -1,15 +1,36 @@
 package CT1_Practice;
 
-class Student {
-    String name;
-    int age;
-    {
-        name = "alu";
+public class Student {
+    String name;          // instance variable
+    int id;               // instance variable
+    static int nextId = 1; // static variable, shared by all objects
+
+    // Constructor
+    public Student(String name) {
+        this.name = name;
+        this.id = nextId;  // assign current ID
+        nextId++;          // prepare ID for the next student
     }
-    Student() {
-        this.name = "potato";
+
+    // Instance method
+    public void showInfo() {
+        System.out.println("ID: " + id + ", Name: " + name);
     }
-    static {
-        System.out.println(3);
+
+    // Static method
+    public static void showNextId() {
+        System.out.println("Next available ID: " + nextId);
+    }
+    public static void main(String[] args) {
+        Student s1 = new Student("Alice");
+        Student s2 = new Student("Bob");
+        Student s3 = new Student("Charlie");
+
+        s1.showInfo(); // ID: 1, Name: Alice
+        s2.showInfo(); // ID: 2, Name: Bob
+        s3.showInfo(); // ID: 3, Name: Charlie
+
+        // Calling static method (no object needed)
+        showNextId(); // Next available ID: 4
     }
 }
