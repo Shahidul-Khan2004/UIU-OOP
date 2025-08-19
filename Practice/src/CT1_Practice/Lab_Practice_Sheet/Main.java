@@ -8,6 +8,7 @@ public class Main {
         Circle c = new Circle(p1, 2);
         Rectangle r = new Rectangle(p, p2);
         System.out.println(r.circleInsideRectangle(c));
-        System.out.println(r.RectangleInsideRectangle(new Rectangle(new Point(1,2), p1)));
+        BangladeshiFlag b = new BangladeshiFlag(r, c);
+        System.out.println(b.isBalanced());
     }
 }
