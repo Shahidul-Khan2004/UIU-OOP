@@ -2,11 +2,12 @@ package CT1_Practice.Lab_Practice_Sheet;
 
 public class Main {
     public static void main(String[] args) {
-        Point p1 = new Point(0, 0);
-        Point p2 = new Point(3,4);
-        Circle c = new Circle(p1, 6);
-        System.out.println(c.pointInsideCircle(p2));
-        Circle c1 = new Circle(p1, 3);
-        System.out.println(c.circleInsideCircle(c1));
+        Point p = new Point(0, 0);
+        Point p1 = new Point(3,4);
+        Point p2 = new Point(6,8);
+        Circle c = new Circle(p1, 2);
+        Rectangle r = new Rectangle(p, p2);
+        System.out.println(r.circleInsideRectangle(c));
+        System.out.println(r.RectangleInsideRectangle(new Rectangle(new Point(1,2), p1)));
     }
 }
