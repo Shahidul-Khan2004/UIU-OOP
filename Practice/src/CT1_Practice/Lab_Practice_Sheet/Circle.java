@@ -6,5 +6,7 @@ public class Circle {
     public boolean pointInsideCircle(Point p) {
         return center.distance(p) > radius;
     }
-
+    public boolean circleInsideCircle(Circle C) {
+        return center.distance(C.center) + C.radius <= radius;
+    }
 }
