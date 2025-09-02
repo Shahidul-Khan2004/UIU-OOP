@@ -6,6 +6,6 @@ public class Triangle extends Shape2D {
         return 0.5 * super.area();
     }
     double perimeter() {
-        return super.perimeter() - super.width;
+        return super.perimeter() - super.length;
     }
 }
