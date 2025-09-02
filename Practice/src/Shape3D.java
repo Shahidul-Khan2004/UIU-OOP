@@ -1,6 +1,6 @@
 public class Shape3D extends Shape2D {
     int height;
-    Shape3D (int length,int  width,int  height) {
+    Shape3D (int length, int width, int height) {
         super(length, width);
         this.height = height;
     }
