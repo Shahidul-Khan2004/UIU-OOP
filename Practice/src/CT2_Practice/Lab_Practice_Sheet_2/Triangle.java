@@ -1,3 +1,5 @@
+package CT2_Practice.Lab_Practice_Sheet_2;
+
 public class Triangle extends Shape2D {
     Triangle(int base, int height) {
         super(base, height);

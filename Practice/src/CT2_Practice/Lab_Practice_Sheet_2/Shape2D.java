@@ -1,3 +1,5 @@
+package CT2_Practice.Lab_Practice_Sheet_2;
+
 public class Shape2D {
     int length;
     int width;

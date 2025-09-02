@@ -1,3 +1,5 @@
+package CT2_Practice.Lab_Practice_Sheet_2;
+
 public class Shape3D extends Shape2D {
     int height;
     Shape3D (int length, int width, int height) {
