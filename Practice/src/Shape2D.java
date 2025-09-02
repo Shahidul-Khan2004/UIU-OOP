@@ -5,10 +5,10 @@ public class Shape2D {
         this.length = length;
         this.width = width;
     }
-    int area() {
+    double area() {
         return length * width;
     }
-    int perimeter() {
+    double perimeter() {
         return 2 * (length + width);
     }
 }
