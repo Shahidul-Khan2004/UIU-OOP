@@ -15,9 +15,6 @@ class Cycle extends Vehicle {
     }
 }
 class Bus extends Vehicle{
-    void move(){
-        System.out.println("Bus is moving");
-    }
     void needFuel(){
         System.out.println("Bus needs fuel");
     }
@@ -25,13 +22,13 @@ class Bus extends Vehicle{
         System.out.println("Bus is starting");
     }
 }
-public class VehicleTest{
+public class VehicleTest {
     public static void main(String[] args) {
         Vehicle bus = new Bus();
         bus.start();
-        (Bus)bus.needFuel();
+        ((Bus)bus).needFuel();
         Vehicle cycle = new Cycle();
         cycle.move();
-        cycle.pedal();
+        ((Cycle)cycle).pedal();
     }
 }
