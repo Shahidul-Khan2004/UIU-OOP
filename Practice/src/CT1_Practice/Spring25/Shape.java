@@ -16,18 +16,18 @@ class Shape {
     // This constructor is used when we only provide width and height values.
     // For example: new Shape(5, 7)
     // The given width and height are stored, but length is not set here (remains 0 by default).
-    Shape (int width, int height) {
-        this.height = height; // "this" means "the current object's height"
-        this.width = width;   // Set the object's width to the given width
+    Shape (int w, int h) {
+        height = h; // "this" means "the current object's height"
+        width = w;   // Set the object's width to the given width
+        length = 0; // Length is not provided, so we set it to 0
     }
 
     // This constructor is used when we provide width, height, AND length.
     // For example: new Shape(4, 5, 6)
     // The given values are stored in the object’s attributes.
-    Shape (int width, int height, int length) {
-        this.height = height;  // Store given height
-        this.width = width;    // Store given width
-        this.length = length;  // Store given length
+    Shape (int width, int height, int l) {
+        this(width, height); // Call the other constructor to set width and height
+        length = l;  // Store given length
     }
 
     // This constructor is called a "copy constructor".
