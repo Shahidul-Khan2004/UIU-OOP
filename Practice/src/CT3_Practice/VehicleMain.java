@@ -19,7 +19,7 @@ class  Bike extends vehicle{
     }
 }
 
-public class Main {
+public class VehicleMain {
     public static void main(String[] args) {
         vehicle v1 = new Car("BMW");
         vehicle v2 = new Bike("Ducati");
