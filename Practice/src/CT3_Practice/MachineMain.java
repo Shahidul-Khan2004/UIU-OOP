@@ -1,6 +1,6 @@
 package CT3_Practice;
 
-public abstract class Machine {
+abstract class Machine {
     protected int id;
 
     public Machine(int id) {
@@ -36,7 +36,6 @@ public class  MachineMain {
     public static void main(String[] args) {
         Machine comp = new Computer(1);
         Machine print = new Printer(2);
-
         comp.start();
         print.start();
     }

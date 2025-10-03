@@ -8,10 +8,10 @@ interface Drawable {
     void draw();
 }
 
-class Circle extends Shape implements Drawable {
+class circle extends Shape implements Drawable {
     private final double radius;
 
-    public Circle(double radius) {
+    public circle(double radius) {
         this.radius = radius;
     }
 
@@ -28,7 +28,7 @@ class Circle extends Shape implements Drawable {
 
 public class ShapeMain {
     public static void main(String[] args) {
-        Circle circle = new Circle(5.0);
+        circle circle = new circle(5.0);
         circle.draw();
         System.out.println("Area: " + circle.area());
     }
