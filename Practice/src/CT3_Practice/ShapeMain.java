@@ -9,7 +9,7 @@ interface Drawable {
 }
 
 class Circle extends Shape implements Drawable {
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         this.radius = radius;
