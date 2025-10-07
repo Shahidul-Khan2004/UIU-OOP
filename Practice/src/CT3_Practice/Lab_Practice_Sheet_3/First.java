@@ -7,25 +7,25 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-class increase implements ActionListener{
+class Change implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
-        GUI.n++;
-        GUI.label.setText(GUI.n + "");
-    }
-}
-
-class decrease implements ActionListener{
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        GUI.n--;
-        GUI.label.setText(GUI.n + "");
+        if(e.getSource() == GUI.buttonp) {
+            GUI.n++;
+            GUI.label.setText(""+GUI.n);
+        }
+        else if(e.getSource() == GUI.buttonm) {
+            GUI.n--;
+            GUI.label.setText(""+GUI.n);
+        }
     }
 }
 
 class GUI{
     public static int n = 10;
     public static JLabel label;
+    static JButton buttonp;
+    static JButton buttonm;
     GUI(){
         JFrame frame = new JFrame("Counter");
         frame.setSize(400,400);
@@ -41,13 +41,15 @@ class GUI{
         label.setFont(new Font("Arial",Font.BOLD,20));
         label.setBorder(BasicBorders.getTextFieldBorder());
 
-        JButton buttonp = new JButton("+");
+        buttonp = new JButton("+");
         buttonp.setBounds(50,240,125,80);
-        buttonp.addActionListener(new increase());
 
-        JButton buttonm = new JButton("-");
+        buttonm = new JButton("-");
         buttonm.setBounds(225,240,125,80);
-        buttonm.addActionListener(new decrease());
+
+        Change al = new Change();
+        buttonp.addActionListener(al);
+        buttonm.addActionListener(al);
 
         frame.add(label);
         frame.add(buttonp);
