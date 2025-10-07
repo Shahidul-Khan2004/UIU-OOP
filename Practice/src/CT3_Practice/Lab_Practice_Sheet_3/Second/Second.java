@@ -1,4 +1,4 @@
-package CT3_Practice.Lab_Practice_Sheet_3;
+package CT3_Practice.Lab_Practice_Sheet_3.Second;
 
 import javax.swing.*;
 import java.awt.*;
