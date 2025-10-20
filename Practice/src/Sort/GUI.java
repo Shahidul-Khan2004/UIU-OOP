@@ -65,13 +65,13 @@ public class GUI extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == submit) {
+        if (e.getSource().equals(submit)) {
             Collections.sort(inputs); // Uses Comparable
-            StringBuilder sorted = new StringBuilder();
-            for(InputField input : inputs) {
-                sorted.append(input.textField.getText()).append(" ");
+            String sorted = "";
+            for (InputField input: inputs) {
+                sorted += input.textField.getText();
             }
-            Sorted.setText(sorted.toString().trim());
+            Sorted.setText(sorted);
         }
     }
 
