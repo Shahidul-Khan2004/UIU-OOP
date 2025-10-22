@@ -21,13 +21,9 @@ class Car extends Thread {
 }
 
 public class Main {
-    static int AvailableSpots;
-    Main(int AvailableSpots) {
-        this.AvailableSpots = AvailableSpots;
-    }
+    static int AvailableSpots = 2;
 
     public static void main(String[] args) {
-        new Main(2);
         Car c1 = new Car(1);
         Car c2 = new Car(2);
         Car c3 = new Car(3);
